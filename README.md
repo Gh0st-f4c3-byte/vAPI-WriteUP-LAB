@@ -1,7 +1,5 @@
 # VAPI LAB
 
-Owner: Edwar Puentes
-
 Start with nmap to find some open ports and we see the next.
 
 ![image.png](Images/image.png)
@@ -11,12 +9,13 @@ we go with explore more this ports trouhg to the browser.
 ![image.png](Images/image%201.png)
 
 When you download the swagger file you need to import to postman, and start with the first exercises,
+
 <details>
-**<summary> API V1 Broken object-level authorization </summary>**
+<summary>API V1 Broken object-level authorization</summary>
 
 #### **Create USER**
 
-you need to create a user, this POST Re
+you need to create a user, thsi POST Re
 
 ![image.png](Images/image%202.png)
 
@@ -77,7 +76,8 @@ to capture our flag you must send the ID = 1
 ![image.png](Images/image%208.png)
 </details>
 
-## **API V2 Broken  authorization**
+<details>
+<summary>API V2 Broken  authorization</summary>
 
 For this laboratory we must to read the clue and say the next:
 
@@ -170,8 +170,10 @@ so we go to the next method on VAPI, in this exercises call get details.
 
 1. the applications is don’t has control over the request, if you remember we made a brute force attack.
 2. we found the csv file with many users and password, so this count like information disclosure.
+</details>
 
-## **API V3 Excessive Data Exposure**
+<details>
+<summary>API V3 Excessive Data Exposure</summary>
 
 This exercise need a little of Pentesting mobile, so you must be install and configure Android Studio and burp suite, is the best to introduce to hackingMobile, so let´s start.
 
@@ -180,8 +182,8 @@ Android Studio you can download for the official site.
 https://developer.android.com/studio
 
 And burp suite, for this chapter I would like to start made the correct configuration for burp suite and the Android device emulated.
-
-#### Burp Suite.
+    <details>
+    <summary>Burp Suite.</summary>
 
 Start with a need listener to intercept de traffic.
 
@@ -195,7 +197,8 @@ Start with a need listener to intercept de traffic.
 
 so the first step is create the listener with the ip address asigned by the network, here we don´t work with a loopback ip (Images/ 127.0.0.1) because the android need some ip address inside the same network.
 
-### Export the certificate Burp Suite.
+    <details>
+    <summary>Export the certificate Burp Suite.<summary>
 
 you must export the certificate in der extension, when you have the file change by .crt
 
@@ -213,7 +216,8 @@ you must export the certificate in der extension, when you have the file change 
 
 ![image.png](Images/image%2034.png)
 
-#### Android Emulator
+    <details>
+    <summary>Android Emulator</summary>
 
 After has the certificate, we need to move to android studio and create a new virtual device, my advisor for this is use old version of android to avoid some behavoiru slow over the device. let´s start.
 
@@ -254,8 +258,8 @@ I use the next for the size of screen, for the simplicity of use,
     
     ![image.png](Images/image%2045.png)
     
-
-#### Deploy certificate and configure Proxy on Android
+    <details>
+    <summary>Deploy certificate and configure Proxy on Android</summary>
 
 if you remember we had made a configuration for a new listener in bupr to intercept the traffic, if you forgot, please go the burp suite section.
 
@@ -293,7 +297,8 @@ you can see the certificate in
 
 ![image.png](Images/6f4610d1-b921-41dc-aacf-b6c6dabee823.png)
 
-#### Proxy Configure in Android Device.
+    <details>
+    <summary>Proxy Configure in Android Device.</summary>
 
 if you see the android has a little menu on the left side, you need to go and press the 3 points on there.
 
@@ -326,7 +331,8 @@ Go to android again, but you need to go to settings > Network & Internet > yous 
 
 And there is all for configure the android device with a Burp Suite we need to see if working.
 
-#### **Test: Capture the traffic with burp suite.**
+ <details>
+    <summary>Test: Capture the traffic with burp suite.</summary>
 
 you must open burp suite, and have 
 
@@ -345,7 +351,8 @@ Form the testing go a chorme inside the android device a search something, you m
 
 this is like you has the burp suite and the android studio working
 
-#### **Continue with the exercise,**
+ <details>
+  <summary>#### **Continue with the exercise,**</summary>
 
 After has the traffic intercept with burpsuite with our android device,  in the vAPI folder you need to go to Resources and you have the next folder.
 
@@ -430,6 +437,18 @@ Expose information
 ![image.png](Images/image%2078.png)
 
 **Vulnerability** : The API is returning excessive information in response to the login request, however not reflecting everything on the interface but use a proxy tool such as Burpsuite can help in finding unnecessarily exposed data.
+
+ </details>
+ </details>
+ </details>
+ </details>
+ </details>
+ </details>
+ </details>
+ </details>
+ </details>
+</details>
+
 
 ## **API V4 Lack of resources and rate-limiting**
 
