@@ -4,7 +4,7 @@ Owner: Edwar Puentes
 
 Start with nmap to find some open ports and we see the next.
 
-![image.png](image.png)
+![../Images/image.png](image.png)
 
 we go with explore more this ports trouhg to the browser.
 
