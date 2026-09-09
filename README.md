@@ -201,25 +201,26 @@ And burp suite, for this chapter I would like to start made the correct configur
 </details>
 
 <details>
-        <summary>Export the certificate Burp Suite.<summary>
+    <summary>Export the certificate Burp Suite.<summary>
 
-        you must export the certificate in der extension, when you have the file change by .crt
+    You must export the certificate in der extension, when you have the file change by .crt
 
-    ![image.png](Images/image%2028.png)
+   ![image.png](Images/image%2028.png)
 
-    ![image.png](Images/image%2029.png)
+   ![image.png](Images/image%2029.png)
 
-    ![image.png](Images/image%2030.png)
+   ![image.png](Images/image%2030.png)
 
-    ![image.png](Images/image%2031.png)
+   ![image.png](Images/image%2031.png)
 
-    ![image.png](Images/image%2032.png)
+   ![image.png](Images/image%2032.png)
 
-    ![image.png](Images/image%2033.png)
+   ![image.png](Images/image%2033.png)
 
-    ![image.png](Images/image%2034.png)
+   ![image.png](Images/image%2034.png)
 
  </details>
+
 
 <details>
 <summary>Android Emulator</summary>
