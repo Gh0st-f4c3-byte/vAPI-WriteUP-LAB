@@ -182,8 +182,9 @@ Android Studio you can download for the official site.
 https://developer.android.com/studio
 
 And burp suite, for this chapter I would like to start made the correct configuration for burp suite and the Android device emulated.
-    <details>
-    <summary>Burp Suite.</summary>
+
+<details>
+<summary>Burp Suite.</summary>
 
 Start with a need listener to intercept de traffic.
 
@@ -197,8 +198,8 @@ Start with a need listener to intercept de traffic.
 
 so the first step is create the listener with the ip address asigned by the network, here we don´t work with a loopback ip (Images/ 127.0.0.1) because the android need some ip address inside the same network.
 
-    <details>
-    <summary>Export the certificate Burp Suite.<summary>
+<details>
+<summary>Export the certificate Burp Suite.<summary>
 
 you must export the certificate in der extension, when you have the file change by .crt
 
@@ -216,8 +217,8 @@ you must export the certificate in der extension, when you have the file change 
 
 ![image.png](Images/image%2034.png)
 
-    <details>
-    <summary>Android Emulator</summary>
+<details>
+<summary>Android Emulator</summary>
 
 After has the certificate, we need to move to android studio and create a new virtual device, my advisor for this is use old version of android to avoid some behavoiru slow over the device. let´s start.
 
@@ -258,8 +259,8 @@ I use the next for the size of screen, for the simplicity of use,
     
     ![image.png](Images/image%2045.png)
     
-    <details>
-    <summary>Deploy certificate and configure Proxy on Android</summary>
+<details>
+<summary>Deploy certificate and configure Proxy on Android</summary>
 
 if you remember we had made a configuration for a new listener in bupr to intercept the traffic, if you forgot, please go the burp suite section.
 
@@ -297,8 +298,8 @@ you can see the certificate in
 
 ![image.png](Images/6f4610d1-b921-41dc-aacf-b6c6dabee823.png)
 
-    <details>
-    <summary>Proxy Configure in Android Device.</summary>
+<details>
+<summary>Proxy Configure in Android Device.</summary>
 
 if you see the android has a little menu on the left side, you need to go and press the 3 points on there.
 
@@ -331,8 +332,8 @@ Go to android again, but you need to go to settings > Network & Internet > yous 
 
 And there is all for configure the android device with a Burp Suite we need to see if working.
 
- <details>
-    <summary>Test: Capture the traffic with burp suite.</summary>
+<details>
+<summary>Test: Capture the traffic with burp suite.</summary>
 
 you must open burp suite, and have 
 
@@ -351,8 +352,8 @@ Form the testing go a chorme inside the android device a search something, you m
 
 this is like you has the burp suite and the android studio working
 
- <details>
-  <summary>#### **Continue with the exercise,**</summary>
+<details>
+<summary>#### **Continue with the exercise,**</summary>
 
 After has the traffic intercept with burpsuite with our android device,  in the vAPI folder you need to go to Resources and you have the next folder.
 
@@ -438,15 +439,15 @@ Expose information
 
 **Vulnerability** : The API is returning excessive information in response to the login request, however not reflecting everything on the interface but use a proxy tool such as Burpsuite can help in finding unnecessarily exposed data.
 
- </details>
- </details>
- </details>
- </details>
- </details>
- </details>
- </details>
- </details>
- </details>
+</details>
+</details>
+</details>
+</details>
+</details>
+</details>
+</details>
+</details>
+</details>
 </details>
 
 
