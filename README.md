@@ -184,19 +184,19 @@ https://developer.android.com/studio
 And burp suite, for this chapter I would like to start made the correct configuration for burp suite and the Android device emulated.
 
 <details>
-       <summary>Burp Suite.</summary>
+    <summary>Burp Suite.</summary>
 
-        Start with a need listener to intercept de traffic.
+    Start with a need listener to intercept de traffic.
 
-        ![image.png](Images/image%2024.png)
+   ![image.png](Images/image%2024.png)
 
-        ![image.png](Images/image%2025.png)
+   ![image.png](Images/image%2025.png)
 
-        ![image.png](Images/image%2026.png)
+   ![image.png](Images/image%2026.png)
 
-        ![image.png](Images/image%2027.png)
+   ![image.png](Images/image%2027.png)
 
-        so the first step is create the listener with the ip address asigned by the network, here we don´t work with a loopback ip (Images/ 127.0.0.1) because the android need some ip address inside the same network.
+    so the first step is create the listener with the ip address asigned by the network, here we don´t work with a loopback ip (Images/ 127.0.0.1) because the android need some ip address inside the same network.
 
 </details>
 
