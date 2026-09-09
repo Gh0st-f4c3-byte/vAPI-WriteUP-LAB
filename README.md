@@ -186,7 +186,7 @@ And burp suite, for this chapter I would like to start made the correct configur
 <details>
     <summary>Burp Suite.</summary>
 
-    Start with a need listener to intercept de traffic.
+Start with a need listener to intercept de traffic.
 
    ![image.png](Images/image%2024.png)
 
@@ -196,14 +196,14 @@ And burp suite, for this chapter I would like to start made the correct configur
 
    ![image.png](Images/image%2027.png)
 
-    so the first step is create the listener with the ip address asigned by the network, here we don´t work with a loopback ip (Images/ 127.0.0.1) because the android need some ip address inside the same network.
+so the first step is create the listener with the ip address asigned by the network, here we don´t work with a loopback ip (Images/ 127.0.0.1) because the android need some ip address inside the same network.
 
 </details>
 
 <details>
     <summary>Export the certificate Burp Suite.<summary>
 
-    You must export the certificate in der extension, when you have the file change by .crt
+You must export the certificate in der extension, when you have the file change by .crt
 
    ![image.png](Images/image%2028.png)
 
@@ -219,11 +219,11 @@ And burp suite, for this chapter I would like to start made the correct configur
 
    ![image.png](Images/image%2034.png)
 
- </details>
+</details>
 
 
 <details>
-<summary>Android Emulator</summary>
+    <summary>Android Emulator</summary>
 
 After has the certificate, we need to move to android studio and create a new virtual device, my advisor for this is use old version of android to avoid some behavoiru slow over the device. let´s start.
 
@@ -263,7 +263,9 @@ I use the next for the size of screen, for the simplicity of use,
     and voilá here is our cellphone.
     
     ![image.png](Images/image%2045.png)
-    
+
+</details>
+
 <details>
 <summary>Deploy certificate and configure Proxy on Android</summary>
 
@@ -444,8 +446,7 @@ Expose information
 
 **Vulnerability** : The API is returning excessive information in response to the login request, however not reflecting everything on the interface but use a proxy tool such as Burpsuite can help in finding unnecessarily exposed data.
 
-</details>
-</details>
+
 </details>
 </details>
 </details>
