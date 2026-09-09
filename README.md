@@ -11,12 +11,12 @@ we go with explore more this ports trouhg to the browser.
 ![image.png](Images/image%201.png)
 
 When you download the swagger file you need to import to postman, and start with the first exercises,
-
-## **API V1 Broken object-level authorization**
+<details>
+## <summary>API V1 Broken object-level authorization</summary>
 
 #### **Create USER**
 
-you need to create a user, thsi POST Re
+you need to create a user, this POST Re
 
 ![image.png](Images/image%202.png)
 
@@ -75,6 +75,7 @@ this confirm we can see more info, if you see the imagen above we consult the ID
 to capture our flag you must send the ID = 1
 
 ![image.png](Images/image%208.png)
+</details>
 
 ## **API V2 Broken  authorization**
 
