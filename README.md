@@ -12,7 +12,7 @@ we go with explore more this ports trouhg to the browser.
 
 When you download the swagger file you need to import to postman, and start with the first exercises,
 <details>
-## <summary>API V1 Broken object-level authorization</summary>
+<summary>## API V1 Broken object-level authorization</summary>
 
 #### **Create USER**
 
