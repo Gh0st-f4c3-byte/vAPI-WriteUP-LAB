@@ -184,38 +184,42 @@ https://developer.android.com/studio
 And burp suite, for this chapter I would like to start made the correct configuration for burp suite and the Android device emulated.
 
 <details>
-<summary>Burp Suite.</summary>
+       <summary>Burp Suite.</summary>
 
-Start with a need listener to intercept de traffic.
+        Start with a need listener to intercept de traffic.
 
-![image.png](Images/image%2024.png)
+        ![image.png](Images/image%2024.png)
 
-![image.png](Images/image%2025.png)
+        ![image.png](Images/image%2025.png)
 
-![image.png](Images/image%2026.png)
+        ![image.png](Images/image%2026.png)
 
-![image.png](Images/image%2027.png)
+        ![image.png](Images/image%2027.png)
 
-so the first step is create the listener with the ip address asigned by the network, here we don´t work with a loopback ip (Images/ 127.0.0.1) because the android need some ip address inside the same network.
+        so the first step is create the listener with the ip address asigned by the network, here we don´t work with a loopback ip (Images/ 127.0.0.1) because the android need some ip address inside the same network.
+
+</details>
 
 <details>
-<summary>Export the certificate Burp Suite.<summary>
+        <summary>Export the certificate Burp Suite.<summary>
 
-you must export the certificate in der extension, when you have the file change by .crt
+        you must export the certificate in der extension, when you have the file change by .crt
 
-![image.png](Images/image%2028.png)
+    ![image.png](Images/image%2028.png)
 
-![image.png](Images/image%2029.png)
+    ![image.png](Images/image%2029.png)
 
-![image.png](Images/image%2030.png)
+    ![image.png](Images/image%2030.png)
 
-![image.png](Images/image%2031.png)
+    ![image.png](Images/image%2031.png)
 
-![image.png](Images/image%2032.png)
+    ![image.png](Images/image%2032.png)
 
-![image.png](Images/image%2033.png)
+    ![image.png](Images/image%2033.png)
 
-![image.png](Images/image%2034.png)
+    ![image.png](Images/image%2034.png)
+
+ </details>
 
 <details>
 <summary>Android Emulator</summary>
@@ -439,8 +443,6 @@ Expose information
 
 **Vulnerability** : The API is returning excessive information in response to the login request, however not reflecting everything on the interface but use a proxy tool such as Burpsuite can help in finding unnecessarily exposed data.
 
-</details>
-</details>
 </details>
 </details>
 </details>
