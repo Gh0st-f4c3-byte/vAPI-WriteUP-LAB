@@ -4,11 +4,11 @@ Owner: Edwar Puentes
 
 Start with nmap to find some open ports and we see the next.
 
-![../Images/image.png](image.png)
+![image.png](Images/image.png)
 
 we go with explore more this ports trouhg to the browser.
 
-![image.png](image%201.png)
+![image.png](Images/image%201.png)
 
 When you download the swagger file you need to import to postman, and start with the first exercises,
 
