@@ -1,4 +1,80 @@
-# VAPI LAB
+# API Pentesting Lab — vAPI Write-up
+
+This repository contains a practical API penetration-testing walkthrough based on the intentionally vulnerable **vAPI** laboratory.
+
+API penetration testing is important because APIs expose application functionality, data, authentication and authorization logic directly to clients. Testing an API therefore requires more than checking the visible application interface: endpoints, parameters, authentication flows, authorization controls, error handling, rate limiting and the data returned by the API must also be assessed.
+
+The **[OWASP API Security Project](https://owasp.org/www-project-api-security/)** provides the **API Security Top 10** as a reference for understanding and testing common API security risks. The current OWASP API Security Top 10 was updated in 2023 and includes risks such as Broken Object Level Authorization, Broken Authentication, Broken Function Level Authorization, Security Misconfiguration and Improper Inventory Management.
+
+> **Lab scope:** This is an educational laboratory. The techniques documented here are intended for the intentionally vulnerable vAPI environment or other systems where testing is explicitly authorized.
+
+---
+
+## Lab Repository
+
+The exercises are based on **vAPI — Vulnerable Adversely Programmed Interface**, an intentionally vulnerable, self-hostable API laboratory designed to reproduce API security scenarios through practical exercises.
+
+- **vAPI repository:** https://github.com/roottusk/vapi
+- **Author:** roottusk / Tushar Kulkarni
+
+The official project provides Docker-based installation as well as a manual installation path.
+
+---
+
+## Tools Used
+
+### Core tools
+
+- **Nmap** — initial network and service discovery.
+- **Postman** — API requests, collections and interaction with the vAPI endpoints.
+- **Burp Suite** — HTTP interception, request modification, Repeater and Intruder.
+- **Android Studio** — Android virtual device setup for the mobile-focused exercise.
+- **Android Emulator** — emulated Android device used in API V3.
+- **Base64 / command-line utilities** — used during authentication/token handling exercises.
+
+### Lab deployment
+
+The official vAPI repository also provides a **Docker-based installation**. Docker is therefore relevant for deploying the laboratory, although it is not directly used in the walkthrough steps below.
+
+---
+
+## Vulnerable Application
+
+vAPI is a self-hostable vulnerable API application created for security training. Its exercises intentionally reproduce API security scenarios so that testers can practice identifying and exploiting weaknesses in a controlled environment.
+
+The laboratory used in this write-up contains exercises covering authorization, authentication, excessive data exposure, rate limiting, mass assignment, CORS/security misconfiguration, injection and API asset management.
+
+---
+
+## Notion Documentation Structure
+
+The original walkthrough was organized in Notion using collapsible sections. This structure is useful for keeping long technical procedures readable: the main API exercise remains visible while detailed configuration steps and screenshots can be expanded only when needed.
+
+![Notion walkthrough structure](Images/notion-structure.png)
+
+The same principle is applied below using Markdown headings and collapsible `<details>` sections.
+
+---
+
+## Write-up
+
+### Lab navigation
+
+| Exercise | Topic |
+|---|---|
+| API V1 | Broken object-level authorization |
+| API V2 | Broken authorization |
+| API V3 | Excessive Data Exposure |
+| API V4 | Lack of resources and rate-limiting |
+| API V5 | Broken Function Level Authorization |
+| API V6 | Broken Function Level Authorization / Mass Assignment |
+| API V7 | Security Misconfiguration |
+| API V8 | Injection |
+| API V9 | V2 Improper Assets Management |
+| API V10 | Improper Assets Management |
+
+### Initial Discovery
+
 
 Start with nmap to find some open ports and we see the next.
 
@@ -10,8 +86,11 @@ we go with explore more this ports trouhg to the browser.
 
 When you download the swagger file you need to import to postman, and start with the first exercises,
 
+
+## API V1 Broken object-level authorization
+
 <details>
-<summary>API V1 Broken object-level authorization</summary>
+<summary>Open walkthrough</summary>
 
 #### **Create USER**
 
@@ -76,8 +155,11 @@ to capture our flag you must send the ID = 1
 ![image.png](Images/image%208.png)
 </details>
 
+
+## API V2 Broken  authorization
+
 <details>
-<summary>API V2 Broken  authorization</summary>
+<summary>Open walkthrough</summary>
 
 For this laboratory we must to read the clue and say the next:
 
@@ -172,8 +254,11 @@ so we go to the next method on VAPI, in this exercises call get details.
 2. we found the csv file with many users and password, so this count like information disclosure.
 </details>
 
+
+## API V3 Excessive Data Exposure
+
 <details>
-<summary>API V3 Excessive Data Exposure</summary>
+<summary>Open walkthrough</summary>
 
 This exercise need a little of Pentesting mobile, so you must be install and configure Android Studio and burp suite, is the best to introduce to hackingMobile, so let´s start.
 
@@ -201,7 +286,7 @@ so the first step is create the listener with the ip address asigned by the netw
 </details>
 
 <details>
-    <summary>Export the certificate Burp Suite.<summary>
+    <summary>Export the certificate Burp Suite.</summary>
 
 You must export the certificate in der extension, when you have the file change by .crt
 
@@ -452,10 +537,12 @@ Expose information
 </details>
 </details>
 </details>
-</details>
-
 
 ## **API V4 Lack of resources and rate-limiting**
+
+<details>
+<summary>Open walkthrough</summary>
+
 
 Basically we have 3 methos in this ocassion, according to the postman in the apiV4.
 
@@ -516,7 +603,13 @@ The response show us the flag
 
 in a short answer we got around rate-limiting on the second-factor authentication mechanism (Images/OTP) by performing a brute-force attack on the OTP value and obtaining the correct OTP and so user data.
 
+</details>
+
 ## API V5 Broken Function Level Authorization
+
+<details>
+<summary>Open walkthrough</summary>
+
 
 The goal here is try to search some information about one user and with this infor try to see information about others user or admins
 
@@ -580,9 +673,15 @@ as you can se we have the flag for this activity.
 
 **VULNERABILITY:** We retrieved information about other users by making an educated guess about a page that was not directly accessible to normal users but didn’t have any authorization checks in place to validate the user’s privileges.
 
+</details>
+
 ## API V6 Broken Function Level Authorization
 
-## Mass Assignment
+<details>
+<summary>Open walkthrough</summary>
+
+
+### Mass Assignment
 
 sometimes APIs accept user input from the client and save it in the database without filtering it. To get unauthorized access to restricted features, an attacker can identify extra objects via API documentation, educated guesses, or HTTP replies and include them in the request. For example, an attacker may attach the &admin=true argument to a user’s registration and acquire admin capabilities.
 
@@ -709,7 +808,13 @@ so if you put 100 credits when you create the user you have the flag.
 
 ![image.png](Images/image%20120.png)
 
+</details>
+
 ## API V7 Security Misconfiguration.
+
+<details>
+<summary>Open walkthrough</summary>
+
 
 “Hey , its an API right? so we ARE expecting Cross Origin Requests . We just hope it works fine.”
 
@@ -762,7 +867,13 @@ talking about the CORS so we can out like header the parameter Origin :  [www.ex
 
 **VULNERABILITY:** happens when a web server configures its Cross-Origin Resource Sharing (Images/CORS) headers too loosely. This allows malicious external websites to read private data or perform unauthorized actions on behalf of a logged-in user through their browser.
 
+</details>
+
 ## API V8 Injection
+
+<details>
+<summary>Open walkthrough</summary>
+
 
 Clue: I think you won't get credentials for this.You can try to login though.
 
@@ -811,7 +922,13 @@ we are capture the flag !!
 
 **VULNERABILITY** :
 
+</details>
+
 ## API V9 V2 Improper Assets Management
+
+<details>
+<summary>Open walkthrough</summary>
+
 
 Clue: Hey Good News!!!!! We just launched our v2 API :)
 
@@ -863,7 +980,13 @@ Thats mean we found the flag.
 
 v2 of API was launched with improved security mechanisms but v1 was still left open to invite attackers for a feast.
 
+</details>
+
 ## API V10 Improper Assets Management
+
+<details>
+<summary>Open walkthrough</summary>
+
 
 We start with the last exercise, API V10  here one shot of the browser.
 
@@ -876,3 +999,5 @@ In this latest exercise, it has been observed that many API services are not sub
 in this case with a simple request, with GET like a method we can obtained the flag.
 
 ![image.png](Images/image%20148.png)
+
+</details>
