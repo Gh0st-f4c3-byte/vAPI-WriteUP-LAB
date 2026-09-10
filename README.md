@@ -46,16 +46,6 @@ The laboratory used in this write-up contains exercises covering authorization, 
 
 ---
 
-## Notion Documentation Structure
-
-The original walkthrough was organized in Notion using collapsible sections. This structure is useful for keeping long technical procedures readable: the main API exercise remains visible while detailed configuration steps and screenshots can be expanded only when needed.
-
-![Notion walkthrough structure](Images/notion-structure.png)
-
-The same principle is applied below using Markdown headings and collapsible `<details>` sections.
-
----
-
 ## Write-up
 
 ### Lab navigation
